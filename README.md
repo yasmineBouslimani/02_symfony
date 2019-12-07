@@ -25,4 +25,8 @@ Créer le fichier .env.local
 
 13 - Symfony : Doctrine relations “Many-To-Many” : https://www.loom.com/share/6e60c0444f874b5d9067f9333d33fb9e
 
+
 14 - Symfony : EntityType : https://www.loom.com/share/9314073ce7a5420a9db6250c6e79cb06
+
+
+15 - Symfony : Les fixtures : https://www.loom.com/share/8ddc4e66bb6647f793c7f589ef6a71a6
