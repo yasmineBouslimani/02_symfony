@@ -3,7 +3,7 @@
 {% block title %}Program{% endblock %}
 
 {% block body %}
-    <h1>Program</h1>
+    <h1>Program {{ program.title }}</h1>
 
     <table class="table">
         <tbody>
@@ -21,7 +21,11 @@
             </tr>
             <tr>
                 <th>Poster</th>
-                <td>{{ program.poster }}</td>
+                <td><img class="w-25" src="{{ program.poster }}" alt="poster"></td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ program.slug }}</td>
             </tr>
         </tbody>
     </table>

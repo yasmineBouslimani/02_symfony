@@ -33,3 +33,6 @@ Créer le fichier .env.local
 
 
 16 - Symfony : Introduction aux “Services” : https://www.loom.com/share/8eb33975ba3847fda09a966f875819bb
+
+
+17 - Symfony : Envoi d’e-mail : https://www.loom.com/share/0367bb539a3741218ff8c2fdf67c2989

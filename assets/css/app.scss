@@ -1,8 +1,12 @@
 @import 'variables.scss';
 @import 'fonts.scss';
 
+body{
+  background-color: pink;
+  font-family: $typo-title;
+}
 .navbar {
-  background-color: $blue;
+  background-color: $grey;
 } .nav-link {
     color : white;
   font-size : 20px;

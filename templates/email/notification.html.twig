@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1> Bonjour</h1>
+    <p>Nous venons d'ajouter une série qui devrait vous plaire :</p>
+
+    <p>{{ program.title }}</p>
+    <img src="{{ program.poster }}" alt="program poster">
+    <p>{{ program.summary }}</p>
+    <a href="http://localhost:8000/program/{{ program.slug }}"> Regarder</a>
+{% endblock %}
