@@ -30,3 +30,6 @@ Créer le fichier .env.local
 
 
 15 - Symfony : Les fixtures : https://www.loom.com/share/8ddc4e66bb6647f793c7f589ef6a71a6
+
+
+16 - Symfony : Introduction aux “Services” : https://www.loom.com/share/8eb33975ba3847fda09a966f875819bb

@@ -1,6 +1,7 @@
 <?php
 namespace App\DataFixtures;
 use App\Entity\Actor;
+use App\Service\Slugify;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -27,7 +28,10 @@ class ActorFixtures extends Fixture implements DependentFixtureInterface
         $i = 0;
         foreach (self::ACTORS as $name => $data) {
             $actor = new Actor();
+            $slugify = new Slugify();
             $actor->setName($name);
+            $slug = $slugify->generate($actor->getName());
+            $actor->setSlug($slug);
             $manager->persist($actor);
             $this->addReference('actor_' . $i, $actor);
             $i++;

@@ -47,7 +47,6 @@ class WildController extends AbstractController
             'actor' => $actor,
             'series' => $series,
         ]);
-
     }
 
     /**
@@ -65,7 +64,7 @@ class WildController extends AbstractController
     }
 
     /**
-     * @Route("/show/{slug<^[ a-zA-Z0-9-é]+$>}", defaults={"slug" = null}, name="wild_show")
+     * @Route("/show/{slug}", defaults={"slug" = null}, name="wild_show")
      * @param string $slug
      * @return Response
      */
@@ -149,7 +148,4 @@ class WildController extends AbstractController
             'episodes' => $episodes,
     ]);
     }
-
-
-
 }
