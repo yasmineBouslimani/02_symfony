@@ -50,10 +50,11 @@ class WildController extends AbstractController
     }
 
     /**
-     * @Route("/episode/{id}", name="show_episode")
+     * @Route("/episodes/{slug}", name="show_episode")
      */
     public function showEpisode(Episode $episode): Response
     {
+
         $season = $episode->getSeason();
         $program = $season->getProgram();
         return $this->render('wild/showEpisode.html.twig', [
@@ -64,19 +65,18 @@ class WildController extends AbstractController
     }
 
     /**
-     * @param int|null $id
-     * @Route("/program/{id}", defaults={"id" = null}, name="wild_show")
+     * @Route("/programm/{slug}", defaults={"slug" = null}, name="wild_show")
      * @return Response
      */
-    public function showByProgram(?int $id):Response
+    public function showByProgram($slug):Response
     {
-        if (!$id) {
+        if (!$slug) {
             throw $this
                 ->createNotFoundException('No id has been sent to find a program in program\'s table.');
         }
         $program = $this->getDoctrine()
             ->getRepository(Program::class)
-            ->findOneBy(['id' => $id]);
+            ->findOneBy(['slug' => $slug]);
         if (!$program) {
             throw $this->createNotFoundException(
                 'No program with found in program\'s table.'
@@ -119,7 +119,7 @@ class WildController extends AbstractController
     }
 
     /**
-     * @Route("/season/{id}", name="wild_season")
+     * @Route("/seasons/{id}", name="wild_season")
      * @param int $id
      * @return Response
      */

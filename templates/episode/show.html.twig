@@ -7,28 +7,47 @@
 
     <table class="table">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ episode.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ episode.title }}</td>
-            </tr>
-            <tr>
-                <th>Number</th>
-                <td>{{ episode.number }}</td>
-            </tr>
-            <tr>
-                <th>Synopsis</th>
-                <td>{{ episode.synopsis }}</td>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ episode.id }}</td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td>{{ episode.title }}</td>
+        </tr>
+        <tr>
+            <th>Number</th>
+            <td>{{ episode.number }}</td>
+        </tr>
+        <tr>
+            <th>Synopsis</th>
+            <td>{{ episode.synopsis }}</td>
+        </tr>
+        <tr>
+            <th>Commentaires</th>
+            <td>
+                <ul>
+                    {% for comment in episode.comments %}
+                        <li>{{ comment.id }} // {{ comment.author.email }} - Rate : {{ comment.rate }} - {{ comment.comment }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
         </tbody>
     </table>
-
+    {% if app.user %}
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <a href="{{ path('comment_new', {'id': episode.id}) }}">Laisser un commentaire</a>
+    {% endif %}
+<br>
+    <br>
     <a href="{{ path('episode_index') }}">back to list</a>
-
-    <a href="{{ path('episode_edit', {'id': episode.id}) }}">edit</a>
+    <br>
+    <a href="{{ path('episode_edit', {'slug': episode.slug}) }}">edit</a>
 
     {{ include('episode/_delete_form.html.twig') }}
 {% endblock %}

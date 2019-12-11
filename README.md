@@ -36,3 +36,7 @@ Créer le fichier .env.local
 
 
 17 - Symfony : Envoi d’e-mail : https://www.loom.com/share/0367bb539a3741218ff8c2fdf67c2989
+
+
+
+18 - Symfony : Gestion des utilisateurs : https://www.loom.com/share/2c5f819208ec494894bbfbe9434b57be
