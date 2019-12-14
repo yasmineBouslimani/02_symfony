@@ -2,12 +2,16 @@
 @import 'fonts.scss';
 
 body{
-  background-color: pink;
   font-family: $typo-title;
+  background-color: #F9F9FA;
 }
 .navbar {
-  background-color: $grey;
-} .nav-link {
+  background-color: $blue;
+} a {
+    list-style-type: none;
+  font-size:20px;
+  color : $dark;
+  } .nav-link {
     color : white;
   font-size : 20px;
   }  .navbar-brand {
@@ -15,9 +19,16 @@ body{
        color : white;
   font-size: 35px;
        &:hover {
-         color : $dark;
+         color : white;
        }
      }
 .checked {
   color: orange;
 }
+
+.img-baniere {
+  width: 100%;
+  background-size: cover;
+}
+
+

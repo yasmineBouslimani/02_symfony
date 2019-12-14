@@ -65,7 +65,7 @@ class WildController extends AbstractController
     }
 
     /**
-     * @Route("/programm/{slug}", defaults={"slug" = null}, name="wild_show")
+     * @Route("/showByprogram/{slug}", defaults={"slug" = null}, name="wild_show")
      * @return Response
      */
     public function showByProgram($slug):Response
