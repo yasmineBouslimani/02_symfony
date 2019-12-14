@@ -40,3 +40,6 @@ Créer le fichier .env.local
 
 
 18 - Symfony : Gestion des utilisateurs : https://www.loom.com/share/2c5f819208ec494894bbfbe9434b57be
+
+
+19 - Symfony : Sécurisons nos routes : https://www.loom.com/share/029a429e462344d49c32de9c5fa27e08
