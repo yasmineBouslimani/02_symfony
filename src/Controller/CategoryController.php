@@ -42,11 +42,11 @@ public function add(Request $request, EntityManagerInterface $em): Response
         $em->persist($category);
         $em->flush();
 
-        return $this->render('Category/add.html.twig', [
+        return $this->render('category/add.html.twig', [
             'category' => $category
             ]);
     }
-    return $this->render('Category/index.html.twig', [
+    return $this->render('category/index.html.twig', [
         'form' => $form->createView(),
     ]);
 }

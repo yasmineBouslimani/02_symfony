@@ -46,3 +46,6 @@ Créer le fichier .env.local
 
 
 20 - Inscription d’un utilisateur : https://www.loom.com/share/6a2d76114157433c95f73b8785c77e68
+
+
+21 - Validation : https://www.loom.com/share/cdaecc09501a46ec89de33119b95ca35
