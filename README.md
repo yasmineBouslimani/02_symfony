@@ -49,3 +49,6 @@ Créer le fichier .env.local
 
 
 21 - Validation : https://www.loom.com/share/cdaecc09501a46ec89de33119b95ca35
+
+
+22 - Symfony : Requêtes personnalisées : https://www.loom.com/share/bb31d0cf1c7a4719af0930234adc9526

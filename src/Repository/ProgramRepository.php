@@ -47,4 +47,17 @@ class ProgramRepository extends ServiceEntityRepository
         ;
     }
     */
+    /**
+     * @return mixed
+     * QueryBuilder + dynamique sans avoir a manipuler une chaîne de caractère
+     */
+    public function findAllWithActors()
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->leftJoin('a.actors', 'c' )
+            ->addSelect( 'c')
+            ->getQuery();
+        return $qb->execute();
+    }
+
 }

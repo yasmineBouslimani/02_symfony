@@ -13,6 +13,7 @@
                 <th>Summary</th>
                 <th>Poster</th>
                 <th>Episodes</th>
+                <th>Actors</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -24,6 +25,14 @@
                 <td>{{ program.summary }}</td>
                 <td><img class="w-25" src="{{ program.poster }}" alt="poster"></td>
                 <td><a href="{{ path('season_index') }}">saisons</a></td>
+
+                <td>
+                    {% for actor in program.actors %}
+                    {{ actor.name }}
+                    {% else %}
+                    No actors
+                    {% endfor %}
+                </td>
                 <td>
                     <a href="{{ path('program_show', {'slug': program.slug}) }}">Show</a>
                         <a href="{{ path('program_edit', {'slug': program.slug}) }}">Edit</a>
